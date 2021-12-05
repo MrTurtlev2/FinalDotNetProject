@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalDotNetProject.Migrations
 {
     [DbContext(typeof(FinalDotNetProjectContext))]
-    [Migration("20211205143543_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20211205153648_Fulfill-Database")]
+    partial class FulfillDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
