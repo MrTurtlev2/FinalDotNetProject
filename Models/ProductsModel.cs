@@ -7,11 +7,11 @@ namespace FinalDotNetProject.Models
 {
     public class ProductsModel
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
 
+        public int Id { get; set; }
         public string Brand { get; set; }
 
+        public string Name { get; set; }
         public short YerOfProduction { get; set; }
 
         public bool IsFromCarDealership { get; set; }
@@ -19,6 +19,7 @@ namespace FinalDotNetProject.Models
         public string FuelType { get; set; }
 
         public int Mileage { get; set; }
+        public int Price { get; set; }
 
     }
    
