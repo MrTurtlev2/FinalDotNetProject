@@ -10,6 +10,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FinalDotNetProject.Data;
+using Owin;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using FinalDotNetProject.Models.Auth;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
 
 namespace FinalDotNetProject
 {
@@ -61,6 +69,44 @@ namespace FinalDotNetProject
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+    }
+
+    public class IdentityConfig
+    {
+        public void Configuration(IAppBuilder app)
+        {
+            app.CreatePerOwinContext(() => new FinalDotNetProjectContext());
+            app.CreatePerOwinContext<AppUserManager>(AppUserManager.Create);
+            app.CreatePerOwinContext<RoleManager<AppRole>>((options, context) =>
+                new RoleManager<AppRole>(
+                    new RoleStore<AppRole>(context.Get<DbContext>())));
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                LoginPath = new PathString("/Home/Login"),
+            });
+        }
+    }
+    public class AppUserManager : UserManager<AppUser>
+    {
+        public AppUserManager(IUserStore<AppUser> store)
+            : base(store)
+        {
+        }
+
+        // this method is called by Owin therefore this is the best place to configure your User Manager
+        public static AppUserManager Create(
+            IdentityFactoryOptions<AppUserManager> options, IOwinContext context)
+        {
+            var manager = new AppUserManager(
+                new UserStore<AppUser>(context.Get<FinalDotNetProjectContext>()));
+
+            // optionally configure your manager
+            // ...
+
+            return manager;
         }
     }
 }

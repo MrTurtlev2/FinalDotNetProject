@@ -1,11 +1,12 @@
 ﻿using FinalDotNetProject.Models;
+using FinalDotNetProject.Models.Auth;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Owin.Host.SystemWeb;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FinalDotNetProject.Controllers
 {
@@ -16,6 +17,34 @@ namespace FinalDotNetProject.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel login)
+        {
+            if (ModelState.IsValid)
+            {
+                var userManager = HttpContext.GetOwinContext().GetUserManager<AppUserManager>();
+                var authManager = HttpContext.GetOwinContext().Authentication;
+
+                AppUser user = userManager.Find(login.Login, login.Password);
+                if (user != null)
+                {
+                    var ident = userManager.CreateIdentity(user,
+                        DefaultAuthenticationTypes.ApplicationCookie);
+                    //use the instance that has been created. 
+                    authManager.SignIn(
+                        new AuthenticationProperties { IsPersistent = false }, ident);
+                    return Redirect(Url.Action("Index", "Home"));
+                }
+            }
+            ModelState.AddModelError("", "Invalid username or password");
+            return View(login);
+        }
+
+        private ActionResult Redirect(object p)
+        {
+            throw new NotImplementedException();
         }
 
         public IActionResult Index()
