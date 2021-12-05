@@ -2,7 +2,7 @@
 
 namespace FinalDotNetProject.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class FulfillDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
