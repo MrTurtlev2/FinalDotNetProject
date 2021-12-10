@@ -28,7 +28,7 @@ public class SeedDatabase
                     {
                         Brand = "Audi",
                         Name = "A7",
-                        YerOfProduction = 2012,
+                        YearOfProduction = 2012,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 276000,
@@ -38,7 +38,7 @@ public class SeedDatabase
                     {
                         Brand = "Audi",
                         Name = "A6",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = true,
                         FuelType = "Diesel",
                         Mileage = 15100,
@@ -48,7 +48,7 @@ public class SeedDatabase
                     {
                         Brand = "Audi",
                         Name = "A5",
-                        YerOfProduction = 2021,
+                        YearOfProduction = 2021,
                         IsFromCarDealership = true,
                         FuelType = "Diesel",
                         Mileage = 4000,
@@ -58,7 +58,7 @@ public class SeedDatabase
                     {
                         Brand = "Audi",
                         Name = "A4 Avant",
-                        YerOfProduction = 2011,
+                        YearOfProduction = 2011,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 121000,
@@ -68,7 +68,7 @@ public class SeedDatabase
                     {
                         Brand = "Audi",
                         Name = "Q8",
-                        YerOfProduction = 2021,
+                        YearOfProduction = 2021,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 276900,
@@ -78,7 +78,7 @@ public class SeedDatabase
                     {
                         Brand = "BMW",
                         Name = "3GT",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 198000,
@@ -88,7 +88,7 @@ public class SeedDatabase
                     {
                         Brand = "BMW",
                         Name = "X3",
-                        YerOfProduction = 2021,
+                        YearOfProduction = 2021,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 6000,
@@ -98,7 +98,7 @@ public class SeedDatabase
                     {
                         Brand = "BMW",
                         Name = "7 730d",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 189000,
@@ -108,7 +108,7 @@ public class SeedDatabase
                     {
                         Brand = "BMW",
                         Name = "4 430i",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 76000,
@@ -118,7 +118,7 @@ public class SeedDatabase
                     {
                         Brand = "BMW",
                         Name = "5",
-                        YerOfProduction = 2021,
+                        YearOfProduction = 2021,
                         IsFromCarDealership = true,
                         FuelType = "Diesel",
                         Mileage = 1000,
@@ -128,7 +128,7 @@ public class SeedDatabase
                     {
                         Brand = "Volkswagen",
                         Name = "Passat",
-                        YerOfProduction = 2018,
+                        YearOfProduction = 2018,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 140900,
@@ -138,7 +138,7 @@ public class SeedDatabase
                     {
                         Brand = "Volkswagen",
                         Name = "Passat B5",
-                        YerOfProduction = 2012,
+                        YearOfProduction = 2012,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 151000,
@@ -148,7 +148,7 @@ public class SeedDatabase
                     {
                         Brand = "Volkswagen",
                         Name = "Touareg",
-                        YerOfProduction = 2012,
+                        YearOfProduction = 2012,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 366000,
@@ -158,7 +158,7 @@ public class SeedDatabase
                     {
                         Brand = "Volkswagen",
                         Name = "Amarok",
-                        YerOfProduction = 2010,
+                        YearOfProduction = 2010,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 321000,
@@ -168,7 +168,7 @@ public class SeedDatabase
                     {
                         Brand = "Volkswagen",
                         Name = "T-Cross",
-                        YerOfProduction = 2019,
+                        YearOfProduction = 2019,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 15000,
@@ -178,7 +178,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Ranger",
-                        YerOfProduction = 2015,
+                        YearOfProduction = 2015,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 116000,
@@ -188,7 +188,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Focus",
-                        YerOfProduction = 2029,
+                        YearOfProduction = 2029,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 6000,
@@ -198,7 +198,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Transit",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 219000,
@@ -208,7 +208,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Kuga",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 7000,
@@ -218,7 +218,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mondeo",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 61000,
@@ -228,7 +228,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mustang Fastback",
-                        YerOfProduction = 2019,
+                        YearOfProduction = 2019,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 1000,
@@ -238,7 +238,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mustang",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 1100,
@@ -248,7 +248,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mustang 4.0",
-                        YerOfProduction = 2012,
+                        YearOfProduction = 2012,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 1000,
@@ -258,7 +258,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mustang",
-                        YerOfProduction = 2011,
+                        YearOfProduction = 2011,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 1000,
@@ -268,7 +268,7 @@ public class SeedDatabase
                     {
                         Brand = "Ford",
                         Name = "Mustang 2.3",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 900,
@@ -278,7 +278,7 @@ public class SeedDatabase
                     {
                         Brand = "Porsche",
                         Name = "Cayenne",
-                        YerOfProduction = 2011,
+                        YearOfProduction = 2011,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 297000,
@@ -288,7 +288,7 @@ public class SeedDatabase
                     {
                         Brand = "Porsche",
                         Name = "Macan S",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 36000,
@@ -298,7 +298,7 @@ public class SeedDatabase
                     {
                         Brand = "Porsche",
                         Name = "Macan",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = true,
                         FuelType = "Diesel",
                         Mileage = 189000,
@@ -308,7 +308,7 @@ public class SeedDatabase
                     {
                         Brand = "Porsche",
                         Name = "911 Carrera",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 97000,
@@ -318,7 +318,7 @@ public class SeedDatabase
                     {
                         Brand = "Porsche",
                         Name = "Panamera 4S",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 95484,
@@ -328,7 +328,7 @@ public class SeedDatabase
                     {
                         Brand = "Mercedes-Benz",
                         Name = "E 220",
-                        YerOfProduction = 2018,
+                        YearOfProduction = 2018,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 210000,
@@ -338,7 +338,7 @@ public class SeedDatabase
                     {
                         Brand = "Mercedes-Benz",
                         Name = "S 500",
-                        YerOfProduction = 2016,
+                        YearOfProduction = 2016,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 135000,
@@ -348,7 +348,7 @@ public class SeedDatabase
                     {
                         Brand = "Mercedes-Benz",
                         Name = "GLC AMG",
-                        YerOfProduction = 2019,
+                        YearOfProduction = 2019,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 4000,
@@ -358,7 +358,7 @@ public class SeedDatabase
                     {
                         Brand = "Mercedes-Benz",
                         Name = "S 350",
-                        YerOfProduction = 2019,
+                        YearOfProduction = 2019,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 99900,
@@ -368,7 +368,7 @@ public class SeedDatabase
                     {
                         Brand = "Mercedes-Benz",
                         Name = "BLB",
-                        YerOfProduction = 2021,
+                        YearOfProduction = 2021,
                         IsFromCarDealership = true,
                         FuelType = "Benzyna",
                         Mileage = 1,
@@ -378,7 +378,7 @@ public class SeedDatabase
                     {
                         Brand = "Toyota",
                         Name = "Corolla",
-                        YerOfProduction = 2019,
+                        YearOfProduction = 2019,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 30000,
@@ -388,7 +388,7 @@ public class SeedDatabase
                     {
                         Brand = "Toyota",
                         Name = "RAV4",
-                        YerOfProduction = 2017,
+                        YearOfProduction = 2017,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 79500,
@@ -398,7 +398,7 @@ public class SeedDatabase
                     {
                         Brand = "Toyota",
                         Name = "ProAce",
-                        YerOfProduction = 2018,
+                        YearOfProduction = 2018,
                         IsFromCarDealership = false,
                         FuelType = "Diesel",
                         Mileage = 202000,
@@ -408,7 +408,7 @@ public class SeedDatabase
                     {
                         Brand = "Toyota",
                         Name = "Land Cruiser",
-                        YerOfProduction = 2008,
+                        YearOfProduction = 2008,
                         IsFromCarDealership = false,
                         FuelType = "Benzyna",
                         Mileage = 138000,
@@ -418,7 +418,7 @@ public class SeedDatabase
                     {
                         Brand = "Toyota",
                         Name = "C-HR",
-                        YerOfProduction = 2022,
+                        YearOfProduction = 2022,
                         IsFromCarDealership = true,
                         FuelType = "Diesel",
                         Mileage = 1,
