@@ -1,0 +1,38 @@
+﻿
+.flex {
+    display: flex;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.tile-galery {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+.tile-wrapper {
+    background-color: grey;
+    border-radius: 12px;
+    width: 400px;
+    margin: 20px 30px;
+}
+.tile-image {
+    border-radius: 12px 12px 0 0;
+}
+.tile-content-wraper {
+    padding: 20px 30px;
+}
+.tile-text {
+    color: #FFF;
+}
+.tools-background {
+    background-image: url("../../Images/tools.webp");
+    background-position: 69% 57%;
+    background-size: 105%;
+    border: none;
+    border-radius: 0 0 12px 12px;
+}
