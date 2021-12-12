@@ -2,7 +2,7 @@
 
 namespace FinalDotNetProject.Migrations
 {
-    public partial class FulfillDatabase : Migration
+    public partial class FinalDotNetProjectMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,12 +12,13 @@ namespace FinalDotNetProject.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Brand = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    YerOfProduction = table.Column<short>(type: "smallint", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    YearOfProduction = table.Column<short>(type: "smallint", nullable: false),
                     IsFromCarDealership = table.Column<bool>(type: "bit", nullable: false),
                     FuelType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Mileage = table.Column<int>(type: "int", nullable: false)
+                    Mileage = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalDotNetProject.Migrations
 {
     [DbContext(typeof(FinalDotNetProjectContext))]
-    [Migration("20211205153648_Fulfill-Database")]
-    partial class FulfillDatabase
+    [Migration("20211210195901_FinalDotNetProjectMigration")]
+    partial class FinalDotNetProjectMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,10 @@ namespace FinalDotNetProject.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<short>("YerOfProduction")
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<short>("YearOfProduction")
                         .HasColumnType("smallint");
 
                     b.HasKey("Id");
