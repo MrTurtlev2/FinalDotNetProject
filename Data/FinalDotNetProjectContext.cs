@@ -4,16 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FinalDotNetProject.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalDotNetProject.Data
 {
-    public class FinalDotNetProjectContext : DbContext
+    public class FinalDotNetProjectContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
         public FinalDotNetProjectContext (DbContextOptions<FinalDotNetProjectContext> options)
             : base(options)
         {
         }
 
-        public DbSet<FinalDotNetProject.Models.ProductsModel> ProductsModel { get; set; }
+        public DbSet<ProductsModel> ProductsModel { get; set; }
     }
 }

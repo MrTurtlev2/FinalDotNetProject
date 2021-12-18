@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FinalDotNetProject.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace FinalDotNetProject
 {
@@ -25,6 +26,15 @@ namespace FinalDotNetProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<IdentityUser, IdentityRole>(
+        options => {
+            options.SignIn.RequireConfirmedAccount = false;
+
+            //Other options go here
+        }
+        )
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddControllersWithViews();
 
             services.AddDbContext<FinalDotNetProjectContext>(options =>
