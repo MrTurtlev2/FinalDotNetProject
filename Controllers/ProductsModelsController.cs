@@ -12,9 +12,9 @@ namespace FinalDotNetProject.Controllers
 {
     public class ProductsModelsController : Controller
     {
-        private readonly FinalDotNetProjectContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public ProductsModelsController(FinalDotNetProjectContext context)
+        public ProductsModelsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace FinalDotNetProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Brand,YerOfProduction,IsFromCarDealership,FuelType,Mileage")] ProductsModel productsModel)
+        public async Task<IActionResult> Create([Bind("Id,Brand,Name,YearOfProduction,IsFromCarDealership,FuelType,Mileage,Price")] ProductsModel productsModel)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace FinalDotNetProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Brand,YerOfProduction,IsFromCarDealership,FuelType,Mileage")] ProductsModel productsModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Brand,Name,YearOfProduction,IsFromCarDealership,FuelType,Mileage,Price")] ProductsModel productsModel)
         {
             if (id != productsModel.Id)
             {

@@ -8,24 +8,22 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FinalDotNetProject.Migrations
 {
-    [DbContext(typeof(FinalDotNetProjectContext))]
-    [Migration("20211205153648_Fulfill-Database")]
-    partial class FulfillDatabase
+    [DbContext(typeof(ApplicationDbContext))]
+    [Migration("20211210195901_FinalDotNetProjectMigration")]
+    partial class FinalDotNetProjectMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.12")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.12");
 
             modelBuilder.Entity("FinalDotNetProject.Models.ProductsModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
@@ -42,7 +40,10 @@ namespace FinalDotNetProject.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<short>("YerOfProduction")
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<short>("YearOfProduction")
                         .HasColumnType("smallint");
 
                     b.HasKey("Id");
