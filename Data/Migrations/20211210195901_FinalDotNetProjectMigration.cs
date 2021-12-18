@@ -10,13 +10,12 @@ namespace FinalDotNetProject.Migrations
                 name: "ProductsModel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Brand = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     YearOfProduction = table.Column<short>(type: "smallint", nullable: false),
                     IsFromCarDealership = table.Column<bool>(type: "bit", nullable: false),
-                    FuelType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FuelType = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     Mileage = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
