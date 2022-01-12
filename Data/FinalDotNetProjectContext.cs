@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using FinalDotNetProject.Models;
 
 namespace FinalDotNetProject.Data
 {
     public class FinalDotNetProjectContext : DbContext
     {
-        public FinalDotNetProjectContext (DbContextOptions<FinalDotNetProjectContext> options)
-            : base(options)
+        private string _connectionString = "Server=(localdb)\\mssqllocaldb;Database=FinalDotNetProjectContext-b395314e-80e0-461b-bb7d-64cfa3ea50c1;MultipleActiveResultSets=true";
+        public FinalDotNetProjectContext (DbContextOptions options): base(options)
         {
         }
 
-        public DbSet<FinalDotNetProject.Models.ProductsModel> ProductsModel { get; set; }
+        public DbSet<ProductsModel> ProductsModel { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(_connectionString);
+        }
     }
 }

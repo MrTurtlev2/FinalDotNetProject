@@ -10,6 +10,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FinalDotNetProject.Data;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace FinalDotNetProject
 {
@@ -32,7 +34,8 @@ namespace FinalDotNetProject
                 options.UseSqlServer(Configuration.GetConnectionString("FinalDotNetProjectContext"));
                 options.EnableSensitiveDataLogging();
             });
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); 
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
