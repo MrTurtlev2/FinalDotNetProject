@@ -9,9 +9,9 @@ namespace FinalDotNetProject.Controllers
 {
     public class ProductsModelsController : Controller
     {
-        private readonly FinalDotNetProjectContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public ProductsModelsController(FinalDotNetProjectContext context)
+        public ProductsModelsController(ApplicationDbContext context)
         {
             _context = context;
         }

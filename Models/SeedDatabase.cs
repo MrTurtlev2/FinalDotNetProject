@@ -10,9 +10,9 @@ public class SeedDatabase
 {
         public static void Initialize(IServiceProvider serviceProvider)
 {
-            using (var context = new FinalDotNetProjectContext(
+            using (var context = new ApplicationDbContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<FinalDotNetProjectContext>>()))
+                    DbContextOptions<ApplicationDbContext>>()))
             {
                 if (context.ProductsModel.Any())
                 {
