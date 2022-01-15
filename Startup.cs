@@ -38,11 +38,11 @@ namespace FinalDotNetProject
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
 
-            services.AddDbContext<FinalDotNetProjectContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("FinalDotNetProjectContext"));
-                options.EnableSensitiveDataLogging();
-            });
+            //services.AddDbContext<FinalDotNetProjectContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration.GetConnectionString("FinalDotNetProjectContext"));
+            //    options.EnableSensitiveDataLogging();
+            //});
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
