@@ -21,6 +21,7 @@ namespace FinalDotNetProject.Models
 
         public int Mileage { get; set; }
         public decimal Price { get; set; }
+        public decimal PriceGross => decimal.Multiply(Price, 1.23m);
 
     }
    
