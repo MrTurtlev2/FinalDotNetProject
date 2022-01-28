@@ -12,10 +12,9 @@
 
 
 <div class="flex-row tile-galery">
-
+    @{var count = 1;}
     @foreach (var item in Model)
     {
-
         <div class="tile-wrapper flex-column">
 
             <img class="tile-image" src="../Images/[@item.Brand].jpg" alt="@item.Brand" />
@@ -32,8 +31,16 @@
                 <p class="tile-text">@Html.DisplayFor(modelItem => item.FuelType)</p>
 
                 <p class="tile-text">@Html.DisplayFor(modelItem => item.Mileage) km</p>
+
+                <p class="tile-text">@Html.DisplayFor(modelItem => item.Price) zł</p>
+
+                <button id="@count" class="showGross">Pokaż / Ukryj cenę brutto</button>
+
+                <p id="@count" class="grossText hidden">@Html.DisplayFor(modelItem => item.PriceGross) zł</p>
+
             </div>
         </div>
+        ++count;
         <!---<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
         <a asp-action="Details" asp-route-id="@item.Id">Details</a>
         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -41,3 +48,34 @@
             -->
     }
 </div>
+<script>
+    let flag = true;
+
+    let parentElement = document.querySelector("body");
+    parentElement.addEventListener("click", (e) =>{
+        let grossText = document.querySelectorAll(".grossText");
+        id = e.target.id;
+        flag = !flag;
+        if (flag) {
+            grossText[id-1].classList.add("hidden");
+        }
+        else {
+            grossText[id-1].classList.remove("hidden");
+        }
+    },false);
+
+</script>
+<style>
+    .hidden{
+        display: none;
+    }
+    .showGross {
+        border-radius: 28px;
+        font-size: 1.1em;
+        color: white;
+        padding: 2px 10px;
+        outline: none !important;
+        background-color: #747472;
+        border: none;
+    }
+</style>
