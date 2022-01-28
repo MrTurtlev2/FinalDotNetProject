@@ -1,6 +1,6 @@
 # Informacje ogólne
 ## Cars Board
-Aplikacja webowa służąca do wystawiania aut na sprzedaż w postaci prostych ogłoszeń. Każde auto zawiera szczegółowe informacje na jego temat, co ułatwia zdecydowanie ułatwi i umili zakup kupującemu :)
+Aplikacja webowa służąca do wystawiania aut na sprzedaż w postaci prostych ogłoszeń. Każde auto zawiera szczegółowe informacje na jego temat, co zdecydowanie ułatwi i umili zakup kupującemu :)
 
 ## Opis techniczny
 * Architektura aplikacji oparta o wzorzec projektowy MVC
