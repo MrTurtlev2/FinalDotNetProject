@@ -17,3 +17,4 @@ $ brew install dotnet
 $ dotnet tool install --global dotnet-ef
 $ dotnet ef database update
 ```
+## Windows
