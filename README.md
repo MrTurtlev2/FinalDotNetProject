@@ -8,6 +8,7 @@ Aplikacja webowa służąca do wystawiania aut na sprzedaż w postaci prostych o
 * System autoryzacji z wykorzystaniem [Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-6.0&tabs=visual-studio)
 * Baza danych oparta o [Entity Framework](https://docs.microsoft.com/en-us/ef/)
 * W celu umożliwienia zewnętrznej integracji z naszym serwisem, udostępnione również zostało REST API
+* Baza danych - SQLite
 
 # Uruchomienie
 ## MACOS/LINUX
