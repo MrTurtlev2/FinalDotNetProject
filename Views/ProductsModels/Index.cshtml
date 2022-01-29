@@ -8,8 +8,8 @@
     <p><a asp-action="Create">Dodaj nowe ogłoszenie</a></p>
 </header>
 <main>
+    <p>Poniżej znajdziesz pełną listę ogłoszeń samochodów z naszego portalu</p>
     <div class="flex-row tile-galery">
-        <p>Poniżej znajdziesz pełną listę ogłoszeń samochodów z naszego portalu</p>
         @{var count = 1;}
         @foreach (var item in Model)
         {
