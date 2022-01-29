@@ -1,48 +1,47 @@
 ﻿@model IEnumerable<FinalDotNetProject.Models.ProductsModel>
 
 @{
-    ViewData["Title"] = "Board";
+    ViewData["Title"] = "Tablica ogłoszeń";
 }
+<header>
+    <h1>Tablica ogłoszeń</h1>
+    <p><a asp-action="Create">Dodaj nowe ogłoszenie</a></p>
+</header>
+<main>
+    <div class="flex-row tile-galery">
+        <p>Poniżej znajdziesz pełną listę ogłoszeń samochodów z naszego portalu</p>
+        @{var count = 1;}
+        @foreach (var item in Model)
+        {
+            <div class="tile-wrapper flex-column">
 
-<h1>Board</h1>
+                <img class="tile-image" src="../Images/[@item.Brand].jpg" alt="@item.Brand" />
 
-<p>
-    <a asp-action="Create">Add New</a>
-</p>
+                <div class="tile-content-wraper tools-background">
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.Name)</p>
 
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.Brand)</p>
 
-<div class="flex-row tile-galery">
-    @{var count = 1;}
-    @foreach (var item in Model)
-    {
-        <div class="tile-wrapper flex-column">
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.YearOfProduction) r</p>
 
-            <img class="tile-image" src="../Images/[@item.Brand].jpg" alt="@item.Brand" />
+                    <p class="tile-text">Auto po dealerze samochodowym: @Html.DisplayFor(modelItem => item.IsFromCarDealership)</p>
 
-            <div class="tile-content-wraper tools-background">
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.Name)</p>
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.FuelType)</p>
 
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.Brand)</p>
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.Mileage) km</p>
 
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.YearOfProduction) r</p>
+                    <p class="tile-text">@Html.DisplayFor(modelItem => item.Price) zł</p>
 
-                <p class="tile-text">Auto po dealerze samochodowym: @Html.DisplayFor(modelItem => item.IsFromCarDealership)</p>
+                    <button id="@count" class="showGross">Pokaż / Ukryj cenę brutto</button>
 
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.FuelType)</p>
+                    <p id="@count" class="grossText hidden">@Html.DisplayFor(modelItem => item.PriceGross) zł</p>
 
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.Mileage) km</p>
-
-                <p class="tile-text">@Html.DisplayFor(modelItem => item.Price) zł</p>
-
-                <button id="@count" class="showGross">Pokaż / Ukryj cenę brutto</button>
-
-                <p id="@count" class="grossText hidden">@Html.DisplayFor(modelItem => item.PriceGross) zł</p>
-
+                </div>
             </div>
-        </div>
-        ++count;
-    }
-</div>
+            ++count;
+        }
+    </div>
+</main>
 <script>
     let flag = true;
 
