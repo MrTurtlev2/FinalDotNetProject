@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 # Database file
 app.db
+
+# Macos related files
+.DS_STORE
